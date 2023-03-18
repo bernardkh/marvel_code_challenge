@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_holder_view"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/character_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/marvel"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="start"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Abomination (Ultimate)"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_holder_view"
+            />
+
+        <TextView
+            android:id="@+id/tx_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lines="2"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            tools:text="Ri one, but now he's mor by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a giant bowling ball of destruction! "
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tx_title"
+            app:layout_constraintEnd_toEndOf="@id/tx_title"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@+id/tx_title"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
